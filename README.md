@@ -1,4 +1,4 @@
-# Clash最佳梯子 | 9月19日21.1M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点订阅节点地址  更新时间 2026-09-19 09:51:12
+# Clash最佳梯子 | 9月26日19.1M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Singbox节点订阅节点地址  更新时间 2026-09-26 11:02:45
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashtizi.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://clashtizi.github.io/uploads/2026/09/0-20260919.yaml
-- https://clashtizi.github.io/uploads/2026/09/1-20260919.yaml
-- https://clashtizi.github.io/uploads/2026/09/2-20260919.yaml
-- https://clashtizi.github.io/uploads/2026/09/3-20260919.yaml
-- https://clashtizi.github.io/uploads/2026/09/4-20260919.yaml
+- https://clashtizi.github.io/uploads/2026/09/0-20260926.yaml
+- https://clashtizi.github.io/uploads/2026/09/1-20260926.yaml
+- https://clashtizi.github.io/uploads/2026/09/2-20260926.yaml
+- https://clashtizi.github.io/uploads/2026/09/3-20260926.yaml
+- https://clashtizi.github.io/uploads/2026/09/4-20260926.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://clashtizi.github.io/uploads/2026/09/0-20260919.txt
-- https://clashtizi.github.io/uploads/2026/09/1-20260919.txt
-- https://clashtizi.github.io/uploads/2026/09/2-20260919.txt
-- https://clashtizi.github.io/uploads/2026/09/3-20260919.txt
-- https://clashtizi.github.io/uploads/2026/09/4-20260919.txt
+- https://clashtizi.github.io/uploads/2026/09/0-20260926.txt
+- https://clashtizi.github.io/uploads/2026/09/1-20260926.txt
+- https://clashtizi.github.io/uploads/2026/09/2-20260926.txt
+- https://clashtizi.github.io/uploads/2026/09/3-20260926.txt
+- https://clashtizi.github.io/uploads/2026/09/4-20260926.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://clashtizi.github.io/uploads/2026/09/20260919.json
+- https://clashtizi.github.io/uploads/2026/09/20260926.json
 
 ## 更多Clash节点订阅 ：
 
