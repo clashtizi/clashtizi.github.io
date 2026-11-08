@@ -166,39 +166,9 @@
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 节点如何正确配置证书？</h5></div>
+    <div class="panel-heading"><h5>V2Ray QUIC 模式在高丢包网络中的优势？</h5></div>
     <div class="panel-body">
-        TLS 证书必须有效且域名匹配，否则客户端无法建立连接。建议使用受信任证书并确保证书链完整，可保证节点安全和长期可用性，同时提高伪装效果和抗封锁能力。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的节点测速如何优化策略组选择？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 会测量节点延迟和丢包率，将低延迟节点优先使用。结合策略组和规则文件，可保证网页、视频和游戏流量走最佳节点，提高访问速度和连接稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 节点分组功能有什么作用？</h5></div>
-    <div class="panel-body">
-        节点可按地区、延迟或用途分类，结合策略组自动分流流量。便于管理大量节点，提高访问速度和连接稳定性，同时优化维护效率，方便用户快速选择最优节点。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 是否能与其他客户端共存？</h5></div>
-    <div class="panel-body">
-        可以。Nekobox 配置独立，不影响其他客户端的运行。用户可同时安装 Clash、Mellow 或 Shadowrocket，按需切换使用，互不干扰。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何用 systemd 管理 V2Ray/ Sing-box 服务？</h5></div>
-    <div class="panel-body">
-        创建 systemd 单元文件，指定 ExecStart 指令并设置 Restart=on-failure 与合适的 User/Group。启用服务并使用 `systemctl enable` 与 `systemctl start` 管理，便于开机自启与日志集中收集。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 混淆方式如何增强隐蔽性？</h5></div>
-    <div class="panel-body">
-        选择合适混淆方式，如 tls1.2_ticket_auth，可模拟 HTTPS 流量。合理搭配协议和混淆参数，提高节点稳定性和抗封锁能力，确保长期科学上网体验顺畅。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 能否直接读取 Clash 配置？</h5></div>
-    <div class="panel-body">
-        Sing-box 原生支持 Clash YAML 格式的导入，会自动解析成自身 JSON 结构。虽然部分脚本功能不兼容，但节点和规则可以正常使用，迁移过程非常平滑。<hr />    </div>
+        QUIC 基于 UDP 协议，支持多路复用和零握手，可减少延迟和丢包。适合视频、游戏和即时通讯等高丢包环境，保证访问稳定性和速度，提高整体体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hysteria2 的多路复用功能有哪些优势？</h5></div>
@@ -206,14 +176,44 @@
         多路复用允许多个请求共享同一 QUIC 连接，减少握手次数和延迟。高并发情况下可以提升吞吐量和稳定性，特别适合短连接频繁请求的应用，如游戏或即时通讯。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 能否直接读取 Clash 配置？</h5></div>
+    <div class="panel-body">
+        Sing-box 原生支持 Clash YAML 格式的导入，会自动解析成自身 JSON 结构。虽然部分脚本功能不兼容，但节点和规则可以正常使用，迁移过程非常平滑。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 节点分组功能有什么作用？</h5></div>
+    <div class="panel-body">
+        节点可按地区、延迟或用途分类，结合策略组自动分流流量。便于管理大量节点，提高访问速度和连接稳定性，同时优化维护效率，方便用户快速选择最优节点。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 的节点测速如何优化策略组选择？</h5></div>
+    <div class="panel-body">
+        Shadowrocket 会测量节点延迟和丢包率，将低延迟节点优先使用。结合策略组和规则文件，可保证网页、视频和游戏流量走最佳节点，提高访问速度和连接稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 混淆方式如何增强隐蔽性？</h5></div>
+    <div class="panel-body">
+        选择合适混淆方式，如 tls1.2_ticket_auth，可模拟 HTTPS 流量。合理搭配协议和混淆参数，提高节点稳定性和抗封锁能力，确保长期科学上网体验顺畅。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何用 systemd 管理 V2Ray/ Sing-box 服务？</h5></div>
+    <div class="panel-body">
+        创建 systemd 单元文件，指定 ExecStart 指令并设置 Restart=on-failure 与合适的 User/Group。启用服务并使用 `systemctl enable` 与 `systemctl start` 管理，便于开机自启与日志集中收集。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan 使用自签名证书会带来哪些问题？</h5></div>
     <div class="panel-body">
         自签名证书无法被客户端默认信任，可能导致连接失败或需要手动安装证书。它也容易被中间人伪造识别，不利于长期生产环境安全部署，建议使用可信 CA 证书以获得更好兼容性与安全性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray QUIC 模式在高丢包网络中的优势？</h5></div>
+    <div class="panel-heading"><h5>Trojan 节点如何正确配置证书？</h5></div>
     <div class="panel-body">
-        QUIC 基于 UDP 协议，支持多路复用和零握手，可减少延迟和丢包。适合视频、游戏和即时通讯等高丢包环境，保证访问稳定性和速度，提高整体体验。    </div>
+        TLS 证书必须有效且域名匹配，否则客户端无法建立连接。建议使用受信任证书并确保证书链完整，可保证节点安全和长期可用性，同时提高伪装效果和抗封锁能力。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekobox 是否能与其他客户端共存？</h5></div>
+    <div class="panel-body">
+        可以。Nekobox 配置独立，不影响其他客户端的运行。用户可同时安装 Clash、Mellow 或 Shadowrocket，按需切换使用，互不干扰。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -261,16 +261,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-9-5.htm" title="Clash最佳梯子 | 9月5日22.3M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点/Trojan节点订阅节点地址">Clash最佳梯子 | 9月5日22.3M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点/Trojan节点订阅节点地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-30-node-share.htm" title="Clash最佳梯子 | 9月30日18.6M/S|免费SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点订阅节点地址">Clash最佳梯子 | 9月30日18.6M/S|免费SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点订阅节点地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-20-free-node-subscribe.htm" title="Clash最佳梯子 | 9月20日21.6M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Singbox节点订阅节点地址">Clash最佳梯子 | 9月20日21.6M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Singbox节点订阅节点地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-10-5.htm" title="Clash最佳梯子 | 10月5日20.3M/S|免费SSR节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点订阅节点地址">Clash最佳梯子 | 10月5日20.3M/S|免费SSR节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点订阅节点地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-v2ray-2026-10-15.htm" title="Clash最佳梯子 | 10月15日21.4M/S|免费V2ray节点/Singbox节点/Clash节点/Trojan节点/SSR节点/Shadowrocket节点订阅节点地址">Clash最佳梯子 | 10月15日21.4M/S|免费V2ray节点/Singbox节点/Clash节点/Trojan节点/SSR节点/Shadowrocket节点订阅节点地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-25.htm" title="Clash最佳梯子 | 9月25日21.3M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点/Trojan节点订阅节点地址">Clash最佳梯子 | 9月25日21.3M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点/Trojan节点订阅节点地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-9-23.htm" title="Clash最佳梯子 | 9月23日20.5M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点订阅节点地址">Clash最佳梯子 | 9月23日20.5M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点订阅节点地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-11-1.htm" title="Clash最佳梯子 | 11月1日18.5M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Trojan节点/Clash节点订阅节点地址">Clash最佳梯子 | 11月1日18.5M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Trojan节点/Clash节点订阅节点地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-30-free-subscribe-node.htm" title="Clash最佳梯子 | 10月30日19.8M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点订阅节点地址">Clash最佳梯子 | 10月30日19.8M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点订阅节点地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-14-node-share.htm" title="Clash最佳梯子 | 9月14日22M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点订阅节点地址">Clash最佳梯子 | 9月14日22M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点订阅节点地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-10-free-subscribe-node.htm" title="Clash最佳梯子 | 10月10日22.6M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/SSR节点/V2ray节点订阅节点地址">Clash最佳梯子 | 10月10日22.6M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/SSR节点/V2ray节点订阅节点地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-29.htm" title="Clash最佳梯子 | 9月29日18M/S|免费V2ray节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点订阅节点地址">Clash最佳梯子 | 9月29日18M/S|免费V2ray节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点订阅节点地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-16-free-subscribe-node.htm" title="Clash最佳梯子 | 9月16日19M/S|免费SSR节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点订阅节点地址">Clash最佳梯子 | 9月16日19M/S|免费SSR节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点订阅节点地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-26-node-share.htm" title="Clash最佳梯子 | 9月26日19.5M/S|免费SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点订阅节点地址">Clash最佳梯子 | 9月26日19.5M/S|免费SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点订阅节点地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-10-1.htm" title="Clash最佳梯子 | 10月1日18.9M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点订阅节点地址">Clash最佳梯子 | 10月1日18.9M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点订阅节点地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-16-free-subscribe-node.htm" title="Clash最佳梯子 | 10月16日22.4M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Clash节点/Singbox节点订阅节点地址">Clash最佳梯子 | 10月16日22.4M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Clash节点/Singbox节点订阅节点地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-12-free-node-subscribe.htm" title="Clash最佳梯子 | 9月12日20.8M/S|免费V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点/Trojan节点订阅节点地址">Clash最佳梯子 | 9月12日20.8M/S|免费V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点/Trojan节点订阅节点地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-9-23.htm" title="Clash最佳梯子 | 9月23日20.5M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点订阅节点地址">Clash最佳梯子 | 9月23日20.5M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点订阅节点地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-24-node-share.htm" title="Clash最佳梯子 | 9月24日19.3M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点/Trojan节点订阅节点地址">Clash最佳梯子 | 9月24日19.3M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点/Trojan节点订阅节点地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -282,7 +282,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">1</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
+                <h4><span class="badge" style="float: right;">8</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
